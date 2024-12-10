@@ -19,15 +19,17 @@ const UserProfile = () => {
   const { isAuthenticated, profile } = useProfile();
 
   if (!isAuthenticated) {
-    return <p></p>;
+    // Show the welcome text when not signed in
+    return (
+      <div className="welcome-text">
+        <h1>Welcome to Anoncraft</h1>
+        <p>Sign in to play</p>
+      </div>
+    );
   }
 
-  return (
-    <div>
-      <p>Welcome, {profile.username}!</p>
-      <img src={profile.pfpUrl} alt={`${profile.username}'s profile`} />
-    </div>
-  );
+  // Show nothing in the center after signing in
+  return null;
 };
 
 const App = () => (
@@ -38,16 +40,8 @@ const App = () => (
         <SignInButton />
       </div>
 
-      {/* Text overlay */}
-      <div className="text-overlay">
-        <h1>Welcome to Anoncraft</h1>
-        <p>Sign in to play</p>
-      </div>
-
-      {/* Centered user profile */}
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '50px' }}>
-        <UserProfile />
-      </div>
+      {/* Centered user profile and welcome text */}
+      <UserProfile />
     </div>
   </AuthKitProvider>
 );
