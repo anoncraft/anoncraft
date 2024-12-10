@@ -2,10 +2,10 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('./assets/BackgroundAnoncraft.webp'); /* Correct file name */
-  background-size: cover; /* Ensure the image covers the full viewport */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-image: url('./assets/BackgroundAnoncraft.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
 }
@@ -17,21 +17,52 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #FFFFFF; /* White text for readability */
-  font-family: 'Exo 2', sans-serif; /* Futuristic font */
+  color: #00FFFF; /* Electric Cyan */
+  font-family: 'Exo 2', sans-serif;
 }
 
 .welcome-text h1 {
-  font-size: 4rem; /* Large text for headline */
+  font-size: 4rem;
+  font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .welcome-text p {
-  font-size: 1.5rem; /* Smaller text for subtitle */
-  color: #FFFFFF; /* White for clarity */
+  font-size: 1.5rem;
+  color: #FFFFFF; /* White text for better readability */
 }
 
-/* Position the login button in the top-right corner */
+/* No NFTs Message */
+.no-nfts-message {
+  text-align: center;
+  max-width: 70%;
+  margin: 100px auto; /* Centered */
+  color: #FFFFFF; /* White text for visibility */
+  font-family: 'Exo 2', sans-serif;
+  font-size: 2rem; /* Larger font for prominence */
+  line-height: 1.8; /* Improved spacing */
+}
+
+.no-nfts-message h2 {
+  font-size: 3.5rem; /* Larger headline */
+  color: #00FFFF; /* Electric Cyan */
+  margin-bottom: 20px;
+}
+
+.no-nfts-message p {
+  margin-bottom: 20px;
+}
+
+.no-nfts-message a {
+  color: #32CD32; /* Bright Lime Green for links */
+  text-decoration: underline;
+}
+
+.no-nfts-message a:hover {
+  color: #FFFFFF; /* White on hover */
+}
+
+/* Top-right button styles */
 .top-right-button {
   position: absolute;
   top: 10px;
@@ -39,66 +70,114 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
 
-/* Styling the SignInButton and Profile Button */
-.top-right-button button {
-  font-size: 16px;
+/* Profile Button Styles */
+.profile-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #32CD32; /* Bright Lime Green */
   padding: 8px 16px;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #32CD32; /* Bright Lime Green for color consistency */
-  color: #FFFFFF; /* White text for contrast */
-  border: none;
   transition: background-color 0.3s ease;
+  color: #FFFFFF; /* White text */
+  font-family: 'Exo 2', sans-serif;
+  font-size: 16px;
 }
 
-.top-right-button button:hover {
+.profile-button:hover {
   background-color: #28A428; /* Slightly darker green on hover */
 }
 
-/* Retain existing styles */
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Profile Picture */
+.profile-pic {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #FFFFFF; /* White border for contrast */
+}
+
+/* Profile Name */
+.profile-name {
+  font-size: 14px;
+  color: #FFFFFF; /* White text */
+  font-family: 'Exo 2', sans-serif;
+}
+
+/* Post-login Welcome Message */
+.post-login-welcome {
   text-align: center;
+  margin-top: 50px;
+  color: #00FFFF; /* Electric Cyan */
+  font-family: 'Exo 2', sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.post-login-welcome h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.post-login-welcome p {
+  font-size: 1.8rem;
+  color: #FFFFFF; /* White for contrast */
 }
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* NFT Gallery */
+.nft-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nft-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.nft-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.card {
-  padding: 2em;
+.nft-card img {
+  width: 100%;
+  border-radius: 8px;
 }
 
-.read-the-docs {
-  color: #888;
+.nft-card p {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Loading Message */
+.loading-message {
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Exo 2', sans-serif;
+  color: #FFFFFF;
+}
+
+.loading-message h2 {
+  font-size: 2.5rem;
+  color: #00FFFF;
+  margin-bottom: 20px;
+}
+
+.loading-message p {
+  font-size: 1.5rem;
 }
