@@ -11,4 +11,5 @@ export default defineConfig({
   define: {
     global: {},
   },
+  base: '/anoncraft/', // Add this line with your GitHub repo name
 });
