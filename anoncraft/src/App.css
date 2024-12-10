@@ -1,3 +1,56 @@
+/* Background Image */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('./assets/BackgroundAnoncraft.webp'); /* Correct file name */
+  background-size: cover; /* Ensure the image covers the full viewport */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Text Overlay Styles */
+.text-overlay {
+  position: absolute;
+  top: 30%; /* Position vertically */
+  left: 50%; /* Position horizontally */
+  transform: translate(-50%, -50%); /* Center the text */
+  text-align: center;
+  color: #00FFFF; /* Electric Cyan for a glowing effect */
+  font-family: 'Exo 2', sans-serif; /* Clean, futuristic font */
+  text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF; /* Neon glow effect */
+}
+
+.text-overlay h1 {
+  font-size: 4rem; /* Large, bold headline */
+  margin-bottom: 1rem;
+}
+
+.text-overlay p {
+  font-size: 1.5rem; /* Subtle subtitle */
+  color: #FFFFFF; /* Pure white for contrast */
+}
+
+/* Position the login button in the top-right corner */
+.top-right-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional: Style the button itself */
+.top-right-button button {
+  font-size: 16px; /* Standard button font size */
+  padding: 8px 16px; /* Padding for a clean look */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+}
+
+/* Retain existing styles */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -11,9 +64,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
